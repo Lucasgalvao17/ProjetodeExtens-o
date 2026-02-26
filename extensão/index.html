@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amazônia Viva — Sistema Interativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo">🌿</div>
+        <div>
+          <div class="brand-title">Amazônia Viva</div>
+          <div class="brand-sub">Turismo & Cultura — Rondônia</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="passeios.html">Passeios</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-left" data-anim>
+        <span class="eyebrow">Projeto de Extensão</span>
+        <h1>Viva experiências reais na Amazônia</h1>
+        <p class="lead">Passeios sustentáveis, guiados por quem conhece a floresta. Sistema interativo para gestão de roteiros, reservas e contatos — pronto para apresentação.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="passeios.html">Ver Passeios</a>
+          <a class="btn ghost" href="cadastro.html">Cadastrar Passeio</a>
+        </div>
+      </div>
+
+      <div class="hero-right card" data-anim>
+        <h3>Reservas rápidas</h3>
+        <form id="quickBooking">
+          <label>Nome<input type="text" id="qb_name" placeholder="Seu nome" required></label>
+          <label>E-mail<input type="email" id="qb_email" placeholder="seu@email.com" required></label>
+          <label>Passeio
+            <select id="qb_trip"></select>
+          </label>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn primary" type="submit">Reservar</button>
+            <button class="btn ghost" type="button" id="qb_clear">Limpar</button>
+          </div>
+          <p id="qb_msg" class="muted" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="container highlights" data-anim>
+      <h2>Destaques</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Conexão local</h3>
+          <p>Parceiros e guias da região de Rondônia.</p>
+        </article>
+        <article class="card">
+          <h3>Sustentabilidade</h3>
+          <p>Práticas pensadas para reduzir impacto e gerar renda.</p>
+        </article>
+        <article class="card">
+          <h3>Sistema Interativo</h3>
+          <p>Cadastre passeios, gerencie reservas e exporte dados facilmente.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© 2025 Amazônia Viva • Projeto de Extensão</div>
+      <div class="muted">Porto Velho, Rondônia</div>
+    </div>
+  </footer>
+
+  <button id="topBtn" class="top-btn" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

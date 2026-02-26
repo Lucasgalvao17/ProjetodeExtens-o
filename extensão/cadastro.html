@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Passeios — Amazônia Viva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><div class="logo">🌿</div><div><div class="brand-title">Amazônia Viva</div><div class="brand-sub">Turismo & Cultura — Rondônia</div></div></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="passeios.html">Passeios</a></li>
+          <li><a href="cadastro.html" class="active">Cadastro</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Gerenciar Passeios</h1>
+
+    <section class="card">
+      <h3>Novo / Editar Passeio</h3>
+      <form id="formPasseio">
+        <input type="hidden" id="p_index">
+
+        <label>Nome do Passeio
+          <input id="p_nome" required>
+        </label>
+
+        <!-- LOCAL — substituído pelas cidades -->
+        <label>Local do Passeio
+          <select id="p_local" required>
+            <option value="">Selecione...</option>
+            <option>Alta Floresta d’Oeste</option>
+            <option>Alto Alegre dos Parecis</option>
+            <option>Alto Paraíso</option>
+            <option>Alvorada d’Oeste</option>
+            <option>Ariquemes</option>
+            <option>Buritis</option>
+            <option>Cabixi</option>
+            <option>Cacaulândia</option>
+            <option>Cacoal</option>
+            <option>Campo Novo de Rondônia</option>
+            <option>Candeias do Jamari</option>
+            <option>Castanheiras</option>
+            <option>Cerejeiras</option>
+            <option>Chupinguaia</option>
+            <option>Colorado do Oeste</option>
+            <option>Corumbiara</option>
+            <option>Costa Marques</option>
+            <option>Cujubim</option>
+            <option>Espigão d’Oeste</option>
+            <option>Governador Jorge Teixeira</option>
+            <option>Guajará-Mirim</option>
+            <option>Itapuã do Oeste</option>
+            <option>Jaru</option>
+            <option>Ji-Paraná</option>
+            <option>Machadinho d’Oeste</option>
+            <option>Ministro Andreazza</option>
+            <option>Mirante da Serra</option>
+            <option>Monte Negro</option>
+            <option>Nova Brasilândia d’Oeste</option>
+            <option>Nova Mamoré</option>
+            <option>Nova União</option>
+            <option>Novo Horizonte do Oeste</option>
+            <option>Ouro Preto do Oeste</option>
+            <option>Parecis</option>
+            <option>Pimenta Bueno</option>
+            <option>Pimenteiras do Oeste</option>
+            <option>Porto Velho</option>
+            <option>Presidente Médici</option>
+            <option>Primavera de Rondônia</option>
+            <option>Rio Crespo</option>
+            <option>Rolim de Moura</option>
+            <option>Santa Luzia d’Oeste</option>
+            <option>São Felipe d’Oeste</option>
+            <option>São Francisco do Guaporé</option>
+            <option>São Miguel do Guaporé</option>
+            <option>Seringueiras</option>
+            <option>Teixeirópolis</option>
+            <option>Theobroma</option>
+            <option>Urupá</option>
+            <option>Vale do Anari</option>
+            <option>Vale do Paraíso</option>
+            <option>Vilhena</option>
+          </select>
+        </label>
+
+        <!-- DURAÇÃO — agora é select -->
+        <label>Duração
+          <select id="p_duracao" required>
+            <option value="">Selecione...</option>
+            <option>2 horas</option>
+            <option>2 a 5 horas</option>
+            <option>Dia inteiro</option>
+          </select>
+        </label>
+
+        <label>Preço (R$)
+          <input id="p_preco" type="number" step="0.01" min="0" required>
+        </label>
+
+        <label>Categoria
+          <select id="p_categoria">
+            <option value="aventura">Aventura</option>
+            <option value="cultural">Cultural</option>
+            <option value="relax">Relax</option>
+          </select>
+        </label>
+
+        <label>Descrição
+          <textarea id="p_descricao" rows="4" required></textarea>
+        </label>
+
+        <div style="display:flex;gap:10px;margin-top:8px">
+          <button class="btn primary" type="submit" id="p_save">Salvar</button>
+          <button class="btn ghost" type="button" id="p_cancel">Cancelar</button>
+          <button class="btn" type="button" id="exportPasseios">Exportar JSON</button>
+        </div>
+      </form>
+    </section>
+
+    <section style="margin-top:18px">
+      <h3>Passeios cadastrados</h3>
+      <table id="tabelaPasseios" class="table">
+        <thead><tr><th>Nome</th><th>Local</th><th>Duração</th><th>Preço</th><th>Categoria</th><th>Ações</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Amazônia Viva</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

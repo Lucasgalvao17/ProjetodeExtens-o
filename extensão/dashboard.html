@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — Amazônia Viva (Admin)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><div class="logo">🌿</div><div><div class="brand-title">Amazônia Viva</div><div class="brand-sub">Dashboard</div></div></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Painel Administrativo</h1>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Passeios cadastrados</h3>
+        <strong id="statPasseios">0</strong>
+      </div>
+      <div class="card">
+        <h3>Reservas</h3>
+        <strong id="statReservas">0</strong>
+      </div>
+      <div class="card">
+        <h3>Contatos</h3>
+        <strong id="statContatos">0</strong>
+      </div>
+    </div>
+
+    <section style="margin-top:18px">
+      <h2>Reservas recentes</h2>
+      <div id="panelReservas" class="card"></div>
+    </section>
+
+    <section style="margin-top:18px">
+      <h2>Mensagens de contato</h2>
+      <div id="panelContatos" class="card"></div>
+    </section>
+
+    <section style="margin-top:18px;display:flex;gap:8px;align-items:center">
+      <button class="btn" id="exportAllData">Exportar tudo (JSON)</button>
+      <button class="btn" id="exportAllCSV">Exportar tudo (CSV)</button>
+      <button class="btn ghost" id="clearAll">Limpar TODOS os dados (localStorage)</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Amazônia Viva</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

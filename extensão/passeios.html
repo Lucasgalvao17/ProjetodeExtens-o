@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Passeios — Amazônia Viva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo">🌿</div>
+        <div>
+          <div class="brand-title">Amazônia Viva</div>
+          <div class="brand-sub">Turismo & Cultura — Rondônia</div>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="passeios.html" class="active">Passeios</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Passeios Disponíveis em Rondônia</h1>
+
+    <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+      <input id="searchPasseios" placeholder="Buscar por nome ou local..." style="flex:1;padding:8px;border-radius:8px;border:1px solid #ddd" />
+      <select id="filterDuration" style="padding:8px;border-radius:8px;border:1px solid #ddd">
+        <option value="">Filtrar por duração</option>
+        <option value="curta">Até 2h</option>
+        <option value="medio">2h - 5h</option>
+        <option value="longa">Mais de 5h</option>
+      </select>
+      <button class="btn" id="clearFilters">Limpar</button>
+    </div>
+
+    <div id="passeios-lista" class="cards-passeios">
+      <!-- Vale das Cachoeiras -->
+      <div class="card-passeio">
+        <img src="fotos/imagensPontosTuristicos/valedascachoeiras.jpg" alt="Vale das Cachoeiras">
+        <h3>Vale das Cachoeiras</h3>
+        <p><strong>Local:</strong> Nova União, Rondônia</p>
+        <p>Um dos locais mais visitados de Rondônia, o Vale das Cachoeiras possui quedas d’água de águas cristalinas cercadas por vegetação amazônica densa. Ideal para banhos, caminhadas e registros fotográficos, o local é um exemplo de turismo sustentável e beleza natural.</p>
+      </div>
+
+      <!-- Forte Príncipe da Beira -->
+      <div class="card-passeio">
+        <img src="fotos/imagensPontosTuristicos/forteprincipe.jpeg" alt="Forte Príncipe da Beira">
+        <h3>Forte Príncipe da Beira</h3>
+        <p><strong>Local:</strong> Costa Marques, Rondônia</p>
+        <p>Construído no século XVIII, o Forte Príncipe da Beira é uma das mais impressionantes obras militares coloniais do Brasil. Localizado às margens do Rio Guaporé, servia como ponto estratégico na defesa da fronteira portuguesa. Hoje, é um ponto histórico e turístico de grande importância.</p>
+      </div>
+
+      <!-- Encontro das Águas Mamoré / Pacaás Novos -->
+      <div class="card-passeio">
+        <img src="fotos/imagensPontosTuristicos/encontrodaságuas.jpg" alt="Encontro das Águas Mamoré e Pacaás Novos">
+        <h3>Encontro das Águas Mamoré / Pacaás Novos</h3>
+        <p><strong>Local:</strong> Guajará-Mirim, Rondônia</p>
+        <p>O encontro entre os rios Mamoré e Pacaás Novos forma um espetáculo natural de cores contrastantes. A diferença de tonalidade das águas cria um visual impressionante, sendo ideal para passeios de barco, fotografia e observação de fauna e flora ribeirinha.</p>
+      </div>
+
+      <!-- Cachoeira 2 de Novembro -->
+      <div class="card-passeio">
+        <img src="fotos/imagensPontosTuristicos/2denovembro.jpg" alt="Cachoeira 2 de Novembro">
+        <h3>Cachoeira 2 de Novembro</h3>
+        <p><strong>Local:</strong> Machadinho D’Oeste, Rondônia</p>
+        <p>Um dos destinos mais procurados do município, a Cachoeira 2 de Novembro é formada por várias quedas e piscinas naturais. A região é ótima para quem busca sossego, natureza e uma boa dose de aventura em meio à floresta amazônica.</p>
+      </div>
+
+      <!-- Cachoeira das Araras -->
+      <div class="card-passeio">
+        <img src="fotos/imagensPontosTuristicos/cachoeira-das-araras.webp" alt="Cachoeira das Araras">
+        <h3>Cachoeira das Araras</h3>
+        <p><strong>Local:</strong> Vilhena, Rondônia</p>
+        <p>Localizada próxima à cidade de Vilhena, a cachoeira é rodeada por vegetação nativa e possui águas claras ideais para banho. Seu nome se deve às araras que habitam a região, tornando o passeio ainda mais encantador e cheio de vida selvagem.</p>
+      </div>
+
+      <!-- Morro Chico Mendes -->
+      <div class="card-passeio">
+        <img src="fotos/imagensPontosTuristicos/Morro-Chico-Mendes.jpg" alt="" srcset="">
+        <h3>Morro Chico Mendes</h3>
+        <p><strong>Local:</strong> Ouro Preto do Oeste, Rondônia</p>
+        <p>Um ponto de ecoturismo e contemplação, o Morro Chico Mendes oferece uma vista panorâmica da região e homenageia o seringueiro e ativista ambiental Chico Mendes. O local é ideal para trilhas, meditação e observação da paisagem amazônica.</p>
+      </div>
+
+      <!-- Cachoeira do Rio Cautário -->
+      <div class="card-passeio">
+        <img src="fotos/imagensPontosTuristicos/cachoeirariocautario.webp" alt="Cachoeira do Rio Cautário">
+        <h3>Cachoeira do Rio Cautário</h3>
+        <p><strong>Local:</strong> Costa Marques, Rondônia</p>
+        <p>Localizada na Reserva Extrativista do Rio Cautário, essa cachoeira é um destino de natureza intocada. Ideal para quem busca um contato direto com o meio ambiente, com trilhas, banho de rio e interação com comunidades locais.</p>
+      </div>
+
+      <!-- Serra dos Reis State Park -->
+      <div class="card-passeio">
+        <img src="fotos/imagensPontosTuristicos/PARQUE-SERRA-DOS-REIS.jpg" alt="Serra dos Reis State Park">
+        <h3>Parque Estadual Serra dos Reis</h3>
+        <p><strong>Local:</strong> São Francisco do Guaporé, Rondônia</p>
+        <p>Área de preservação ambiental que abriga espécies raras e paisagens exuberantes. O Parque Estadual Serra dos Reis é um dos destinos preferidos de ecoturistas, oferecendo trilhas, cachoeiras e uma biodiversidade impressionante.</p>
+      </div>
+
+      <!-- Museu Madeira-Mamoré -->
+      <div class="card-passeio">
+       <img src="fotos/imagensPontosTuristicos/museuefmm.webp" alt="">
+        <h3>Museu Madeira-Mamoré</h3>
+        <p><strong>Local:</strong> Porto Velho, Rondônia</p>
+        <p>O museu conta a história da lendária Estrada de Ferro Madeira-Mamoré, construída no início do século XX. O visitante pode ver locomotivas antigas, fotos históricas e aprender sobre um dos maiores desafios da engenharia na Amazônia.</p>
+      </div>
+    </div>
+
+    <hr style="margin-top:24px" />
+    <h2>Reservas recentes</h2>
+    <div id="recentBookings" class="card"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Amazônia Viva</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

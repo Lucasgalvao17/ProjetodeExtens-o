@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato — Amazônia Viva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><div class="logo">🌿</div><div><div class="brand-title">Amazônia Viva</div><div class="brand-sub">Turismo & Cultura — Rondônia</div></div></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="passeios.html">Passeios</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Fale conosco</h1>
+    <div class="grid-2">
+      <div class="card">
+        <form id="formContato">
+          <label>Nome<input id="c_nome" required></label>
+          <label>E-mail<input id="c_email" type="email" required></label>
+          <label>Assunto<input id="c_assunto"></label>
+          <label>Mensagem<textarea id="c_mensagem" rows="5" required></textarea></label>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn primary" type="submit">Enviar</button>
+            <button class="btn ghost" type="button" id="clearContact">Limpar</button>
+          </div>
+        </form>
+        <p id="contactResult" class="muted" aria-live="polite"></p>
+      </div>
+
+      <aside class="card">
+        <h3>Informações</h3>
+        <p class="muted">Sede administrativa — Porto Velho, Rondônia</p>
+        <p class="muted">Telefone: (97) 9XXXX-XXXX</p>
+        <p class="muted">E-mail: contato@amazoniaviva.local</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Amazônia Viva</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
